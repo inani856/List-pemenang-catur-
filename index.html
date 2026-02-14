@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            /* Memanggil gambar dari folder static lu [cite: 2026-02-14] */
-            background: linear-gradient(rgba(10, 12, 18, 0.98), rgba(10, 12, 18, 0.98)), url('static/bg.jpg'); 
+            /* Perbaikan: Pakai ./ agar lebih akurat nembak ke folder [cite: 2026-02-14] */
+            background: linear-gradient(rgba(10, 12, 18, 0.95), rgba(10, 12, 18, 0.95)), url('./static/bg.jpg'); 
             background-size: cover; 
             background-attachment: fixed; 
             background-position: center;
@@ -21,10 +21,8 @@
             margin: 0;
         }
         
-        /* Container Ultra-Slim & Estetik [cite: 2026-02-14] */
         .main-box { width: 100%; max-width: 400px; padding: 30px 15px; }
 
-        /* Grid System dengan pembatas tipis [cite: 2026-02-12] */
         .grid-row { 
             display: grid; 
             grid-template-columns: 45px 1fr 65px 85px; 
@@ -36,18 +34,17 @@
         }
         .grid-row > div:last-child { border-right: none; }
 
-        /* Efek Glassmorphism halus [cite: 2026-02-14] */
         .panel-bg { 
-            background: rgba(22, 27, 34, 0.4); 
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.06); 
+            background: rgba(22, 27, 34, 0.3); 
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.08); 
             border-radius: 20px; 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
             overflow: hidden; 
         }
 
         .rank-number { font-size: 10px; font-weight: 800; }
-        .player-name { font-size: 12px; font-weight: 600; letter-spacing: -0.01em; }
+        .player-name { font-size: 12px; font-weight: 600; }
         .tropi-count { font-size: 16px; font-weight: 800; color: #60a5fa; }
     </style>
 </head>
@@ -73,22 +70,19 @@
             </div>
 
             <div class="divide-y divide-white/[0.04]">
-                
                 <div class="grid-row hover:bg-white/[0.02] transition duration-300">
                     <div class="text-center rank-number text-yellow-500">01</div>
-                    <div class="player-name text-white truncate">YURAZzz</div>
+                    <div class="player-name text-white truncate">YURAZZZ</div>
                     <div class="text-center tropi-count">1</div>
                     <div class="text-right text-[8px] text-gray-600 font-mono px-4">14/02/26</div>
                 </div>
-
                 <div class="grid-row hover:bg-white/[0.02] transition duration-300">
-                    <div class="text-center rank-number text-gray-500">02</div>
-                    <div class="player-name text-gray-300 truncate"></div>
-                    <div class="text-center tropi-count"></div>
-                    <div class="text-right text-[8px] text-gray-600 font-mono px-4"></div>
+                    <div class="text-center rank-number text-gray-600">02</div>
+                    <div class="player-name text-gray-500 truncate">--</div>
+                    <div class="text-center tropi-count">0</div>
+                    <div class="text-right text-[8px] text-gray-800 font-mono px-4">--/--/--</div>
                 </div>
-
-                </div>
+            </div>
         </div>
 
         <div class="mt-12 text-center">
